@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "product_id": 99,
+    "user_id": 12345,
+    "serial_number": "123456789ABCEDF",
+    "mac_address": "123456789ABCEDF",
+    "name": "Mower",
+    "locked": false,
+    "online": true
+  }
+]

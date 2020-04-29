@@ -1,0 +1,19 @@
+{
+    "id": 12345,
+    "email": "mail@mail.com",
+    "name": "firstname",
+    "surname": "lastname",
+    "user_type": "customer",
+    "locale": "de",
+    "push_notifications": true,
+    "location": {
+      "latitude": 1.11111,
+      "longitude": 2.22222
+    },
+    "terms_of_use_agreed": true,
+    "country_id": 276,
+    "mqtt_endpoint": "mqtt-host.com",
+    "actions_on_google_pin_code": null,
+    "created_at": "2018-01-01 13:00:00",
+    "updated_at": "2019-01-01 13:00:00"
+  }
