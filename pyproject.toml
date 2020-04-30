@@ -6,9 +6,8 @@ authors = ["Markus Haack"]
 license = "GNU General Public License v3.0"
 
 [tool.poetry.dependencies]
-python = ">=3.4"
+python = "^3.6"
 requests-oauthlib = "^1.3.0"
-typing = { version = "^3.7.4", python = "<3.5" }
 ratelimit = "^2.2.1"
 
 [tool.poetry.dev-dependencies]
