@@ -16,8 +16,14 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class TestLandroidApi:
     @fixture
+    @httpretty.activate
     def client(self):
-        return LandroidAPI("foo", "faa", "user", "password")
+        with open(os.path.join(CURRENT_DIR, "get_token.json"), "r") as get_token:
+            httpretty.register_uri(
+                httpretty.POST, BASE_URL + "/oauth/token", body=get_token.read()
+            )
+
+        return LandroidAPI("1", "faa", "user", "password")
 
     @httpretty.activate
     def test_landroidmowerlist(self, client):
@@ -25,6 +31,11 @@ class TestLandroidApi:
             httpretty.register_uri(
                 httpretty.GET, BASE_URL + "/product-items", body=get_mowers.read()
             )
+        with open(os.path.join(CURRENT_DIR, "get_token.json"), "r") as get_token:
+            httpretty.register_uri(
+                httpretty.POST, BASE_URL + "/oauth/token", body=get_token.read()
+            )
+
         mowers = LandroidMowerList(client).mowers
         assert len(mowers) == 1
         assert mowers[0].id == 1
