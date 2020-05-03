@@ -40,4 +40,4 @@ for mower in MOWERS.mowers:
 
 The initial idea for this project started with the plan to create some native Home Assistant integration for connected Worx Landroid lawnmowers. A [Domoticz forum post](https://easydomoticz.com/forum/viewtopic.php?t=8246) gave the information for the first prototype. They get the credit for reverse engineering the API.
 
-@tetienne with his [somfy-open-api](https://github.com/tetienne/somfy-open-api) also was a very good inspiration to bootstrap this project.
+[@tetienne](https://github.com/tetienne) with his [somfy-open-api](https://github.com/tetienne/somfy-open-api) also was a very good inspiration to bootstrap my first Python project.
